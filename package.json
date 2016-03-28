@@ -1,0 +1,21 @@
+{
+  "name": "dashboard_app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack --watch"
+  },
+  "author": "Dmitry",
+  "license": "ISC",
+  "dependencies": {
+    "babel-cli": "^6.6.5",
+    "babel-preset-react": "^6.5.0"
+  },
+  "devDependencies": {
+    "babel-preset-react": "^6.5.0",
+    "react": "^0.14.7",
+    "react-dom": "^0.14.7",
+    "webpack": "^1.12.14"
+  }
+}
