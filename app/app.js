@@ -1,15 +1,11 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { render } from 'react-dom'
 
-import Auth from "./components/Auth";
+import Config from "./components/Config";
 
-var welcome = "Welcome, mthfcker";
-
-var content = document.getElementById('content');
-content.innerHTML += welcome;
-
-
-ReactDOM.render(
-    <Auth />,
-    document.getElementById("content")
+render(
+    <div>
+        <Config />
+    </div>,
+    document.getElementById('content')
 );
