@@ -53,8 +53,13 @@ h1 {
   overflow: hidden;
 }
 
-.page-wrapper {
-  padding: 0 15px;
+.underline {
+  border-color: rgba(0, 0, 0, 0.2);
+}
+
+.underline-bottom {
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
 }
 
 .unselectable {

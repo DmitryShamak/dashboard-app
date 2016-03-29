@@ -1,5 +1,7 @@
 @import "base";
 
+$mainBgColor: #2d3037;
+
 html,
 body {
   margin: 0;
@@ -12,7 +14,7 @@ body {
 
 .nav {
   color: #FFF;
-  background-color: #2d3037;
+  background-color: $mainBgColor;
 
   a {
     color: #FFF !important;
@@ -28,8 +30,11 @@ body {
 .auth-page,
 .landing-page,
 .profile-page {
-  padding: 10px 15px 20px;
-
+  padding: 0 15px 20px;
+}
+.auth-page,
+.landing-page,
+.profile-page .profile-settings {
   max-height: 400px;
   overflow-y: auto;
 }
@@ -56,4 +61,67 @@ body {
   }
 }
 
-.profile-page {}
+.profile-page {
+  $profileImageSize: 80px;
+  $pluginItemPadding: 5px;
+
+  .profile-header {
+    color: #FFF;
+    background-color: $mainBgColor;
+  }
+
+  .profile-image {
+    display: inline-block;
+    width: $profileImageSize;
+    height: $profileImageSize;
+
+    border-radius: 50%;
+    background-size: cover;
+    background-position: center;
+    background-image: url("https://lh5.googleusercontent.com/-GpPzcTnQkFo/AAAAAAAAAAI/AAAAAAAAAJs/5B1YWhQankc/photo.jpg");
+  }
+
+  .profile-control-wrapper {
+    .control-btn {
+      font-size: 1.1em;
+    }
+  }
+
+  .profile-settings {
+    padding: 0 10px;
+
+    .profile-plugins-wrapper {
+      margin: 10px 0;
+
+      background: #fff;
+
+      .profile-plugin {
+        position: relative;
+
+        padding: $pluginItemPadding;
+
+        background-color: rgba(0, 0, 0, 0.1);
+
+        overflow: hidden;
+
+        .plugin-details {
+          font-size: 0.8em;
+
+          h5,
+          p {
+            margin-bottom: 0;
+          }
+        }
+
+        .plugin-btn {
+          position: absolute;
+          top: 50%; right: 10px;
+          margin-top: -0.6em;
+
+          color: #BD4D4D;
+          font-size: 1.2em;
+        }
+      }
+    }
+  }
+}
