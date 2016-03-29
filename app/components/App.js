@@ -4,7 +4,8 @@ import Nav from "./Nav"
 
 var App = React.createClass({
     getState: function() {
-        var state = window.location.hash.replace(/#\/([a-z]+).*/, "$1");
+        var state = window.location.hash.replace(/#\/([a-z]*).*/, "$1");
+
         return state;
     },
     getInitialState: function() {
@@ -14,17 +15,17 @@ var App = React.createClass({
     componentDidMount: function() {
         var state = this.getState();
         //if no user sign in
-        if(!this.state.user && state !== "auth") {
-            return window.location.href = "/auth";
+        if(!state || (!this.state.user && state !== "auth")) {
+            return window.location.hash = "auth";
         }
 
         if(this.state.user && state === "auth") {
-            window.location.href = "/landing";
+            window.location.hash = "landing";
         }
     },
     render: function() {
         return (
-            <div className="container">
+            <div>
                 <Nav getState={this.getState}/>
                 {this.props.children}
             </div>

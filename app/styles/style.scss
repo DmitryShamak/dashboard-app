@@ -1,4 +1,7 @@
-*{
+@import "base";
+
+html,
+body {
   margin: 0;
   padding: 0;
 }
@@ -8,16 +11,28 @@ body {
 }
 
 .nav {
-  padding: 10px 15px;
-
-  background-color: #2d3037;
   color: #FFF;
+  background-color: #2d3037;
+
+  a {
+    color: #FFF !important;
+    padding: 5px;
+
+    &.active,
+    &:hover {
+      color: #e28d23 !important;
+    }
+  }
 }
 
-.container {
-  .auth-page {}
-
-  .landing-page {}
-
-  .profile-page {}
+.auth-page,
+.landing-page,
+.profile-page {
+  padding: 30px 0;
 }
+
+.auth-page {}
+
+.landing-page {}
+
+.profile-page {}

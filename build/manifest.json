@@ -17,5 +17,8 @@
       ],
       "js": ["app.js", "styles.css"]
     }
-  ]
+  ],
+  "background": {
+    "scripts": ["background.js"]
+  }
 }

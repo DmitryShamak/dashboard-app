@@ -8,13 +8,21 @@ var Nav = React.createClass({
 
         if(state !== "auth") {
             return (
-                <div className="nav">
-                    <Link to="landing">
-                        <i className="fa fa-modx"></i>
-                    </Link>
-                    <Link to="profile">
-                        <i className="fa fa-user"></i>
-                    </Link>
+                <div className="nav clearfix">
+                    <div className="col-xs-6">
+                        <h5>Dashboard App</h5>
+                    </div>
+                    <div className="col-xs-6 text-right">
+                        <Link to="landing" activeClassName="active" className="btn">
+                            <i className="fa fa-modx"></i>
+                        </Link>
+                        <Link to="profile" activeClassName="active" className="btn">
+                            <i className="fa fa-user"></i>
+                        </Link>
+                        <Link to="auth" activeClassName="active" className="btn">
+                            <i className="fa fa-sign-out"></i>
+                        </Link>
+                    </div>
                 </div>
             );
         }

@@ -1,0 +1,71 @@
+h5 {
+  font-size: 1.4em;
+}
+h4 {
+  font-size: 1.5em;
+}
+h3 {
+  font-size: 1.7em;
+}
+h2 {
+  font-size: 1.8em;
+}
+h1 {
+  font-size: 2em;
+}
+
+.text-bold {
+  font-weight: 700;
+}
+.text-medium {
+  font-weight: 500;
+}
+.text-light {
+  font-weight: 300;
+}
+.text-thin {
+  font-weight: 100;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.disabled {
+  -webkit-user-select: none;
+  user-select: none;
+
+  pointer-events: none;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.hidden-content {
+  overflow: hidden;
+}
+
+.cutted-text {
+  width: 100%;
+
+  text-overflow: ellipsis;
+  white-space: nowrap;
+
+  overflow: hidden;
+}
+
+.page-wrapper {
+  padding: 0 15px;
+}
+
+.unselectable {
+  * {
+    user-select: none;
+    -webkit-user-select: none;
+  }
+}
+
+.has-error {
+  input {
+    border-color: #EF6C6C;
+  }
+}
