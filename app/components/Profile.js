@@ -3,7 +3,7 @@ import React from 'react';
 var Profile = React.createClass({
     render: function() {
         return (
-            <div>
+            <div className="profile-page">
                 <div>Profile</div>
             </div>
         );

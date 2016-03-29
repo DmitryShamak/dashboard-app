@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Router, Route, DefaultRoute } from 'react-router'
-import { browserHistory } from 'react-router'
+import { hashHistory } from 'react-router'
 
 import App from "./App";
 import Auth from "./Auth";
@@ -11,7 +11,7 @@ import Profile from "./Profile";
 var Config = React.createClass({
     render: function() {
         return (
-            <Router history={browserHistory}>
+            <Router history={hashHistory}>
                 <Route path="/" component={App}>
                     <Route path="auth" component={Auth} />
                     <Route path="landing" component={Landing} />

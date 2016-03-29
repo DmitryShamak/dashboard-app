@@ -3,7 +3,7 @@ import React from 'react'
 var Landing = React.createClass({
     render: function() {
         return (
-            <div>
+            <div className="landing-page">
                 <div>Landing</div>
             </div>
         );

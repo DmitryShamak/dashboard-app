@@ -4,13 +4,17 @@ import { Link } from 'react-router';
 
 var Nav = React.createClass({
     render: function() {
-        var state = window.location.pathname.replace(/^\//, "");
+        var state = this.props.getState();
 
         if(state !== "auth") {
             return (
-                <div>
-                    <Link to="/landing">Landing</Link>
-                    <Link to="/profile">Profile</Link>
+                <div className="nav">
+                    <Link to="landing">
+                        <i className="fa fa-modx"></i>
+                    </Link>
+                    <Link to="profile">
+                        <i className="fa fa-user"></i>
+                    </Link>
                 </div>
             );
         }

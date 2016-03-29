@@ -1,0 +1,21 @@
+{
+  "manifest_version": 2,
+
+  "name": "Dashboard",
+  "description": "This extension shows smth",
+  "version": "0.1",
+
+  "browser_action": {
+    "default_icon": "imgs/favicon.png",
+    "default_popup": "index.html"
+  },
+
+  "content_scripts": [
+    {
+      "matches": [
+        "http://*/*"
+      ],
+      "js": ["app.js", "styles.css"]
+    }
+  ]
+}

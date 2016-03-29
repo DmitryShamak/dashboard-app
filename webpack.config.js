@@ -1,61 +1,26 @@
-//var webpack = require("webpack");
-//
-//module.exports = {
-//    entry: [
-//        'webpack-hot-middleware/client',
-//        "./app/app.js"
-//    ],
-//    output: {
-//        path: "./build",
-//        filename: "app.js"
-//    },
-//    plugins: [
-//        new webpack.optimize.OccurenceOrderPlugin()
-//    ],
-//    module: {
-//        loaders: [{
-//            test: /\.js?$/,
-//            loader: 'babel',
-//            exclude: /node_modules/,
-//            query: {
-//                presets: ['es2015', 'react']
-//            }
-//        }]
-//    }
-//};
-
-var path = require('path');
-var webpack = require('webpack');
+var webpack = require("webpack");
+var ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 module.exports = {
-    //devtool: 'cheap-module-eval-source-map',
-    entry: [
-        'webpack-hot-middleware/client',
-        './app/app.js'
-    ],
+    entry: "./app/app.js",
     output: {
-        path: path.join(__dirname, 'build'),
-        filename: 'app.js',
-        publicPath: '/static/'
+        path: "./build",
+        filename: "app.js"
+    },
+    module: {
+        loaders: [{
+            test: /\.js?$/,
+            loader: 'babel',
+            exclude: /node_modules/,
+            query: {
+                presets: ['es2015', 'react']
+            }
+        }, {
+            test: /\.scss$/,
+            loader: ExtractTextPlugin.extract(["css-loader", "sass-loader"])
+        }]
     },
     plugins: [
-        new webpack.optimize.OccurenceOrderPlugin(),
-        new webpack.HotModuleReplacementPlugin()
-    ],
-    module: {
-        loaders: [
-            {
-                test: /\.js$/,
-                loaders: [ 'babel?presets[]=react,presets[]=es2015,presets[]=react-hmre' ],
-                exclude: /node_modules/,
-                include: __dirname
-            },
-            {
-                test: /\.json$/,
-                loaders: [ 'json' ],
-                exclude: /node_modules/,
-                include: __dirname
-            }
-        ]
-    }
+        new ExtractTextPlugin("styles.css")
+    ]
 };
