@@ -29,6 +29,9 @@ body {
 .landing-page,
 .profile-page {
   padding: 30px 0;
+
+  max-height: 400px;
+  overflow-y: auto;
 }
 
 .auth-page {}
